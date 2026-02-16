@@ -10,15 +10,17 @@ public class Calculations {
         double increase = 0.03;
     }
     
+    interface allowance{
+        double dailyAllowance = 300;
+    }
+    
     interface output{
         void semesterOutput();
         void aprilAllowance();
     }
     
-    public static class allowancePerSem implements semesters, moneyIncrease, output{
-       
-        double dailyAllowance = 300;
-        
+    public static class allowancePerSem implements semesters, moneyIncrease, output, allowance{
+     
         @Override
         public void aprilAllowance(){
             double untilApril = 80;
